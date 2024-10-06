@@ -4,6 +4,15 @@
   "title": "Echo executor",
   "description": "",
   "type": "object",
-  "properties": {},
+  "properties": {
+    "value": {
+      "type": "string",
+      "description": "The value to echo.",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      }
+    }
+  },
   "required": []
 }
