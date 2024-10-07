@@ -7,7 +7,8 @@
   "tags": [],
   "targets": {
     "echo": {
-      "command": "echo 'hello world'"
+      "executor": "@my-workspace/my-plugin:echo",
+      "options": {}
     },
     "build": {
       "executor": "@angular-devkit/build-angular:application",
