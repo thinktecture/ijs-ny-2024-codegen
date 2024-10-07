@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/schema",
+  "version": 2,
+  "title": "Echo executor",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "value": {
+      "type": "string",
+      "description": "The value to echo.",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      }
+    },
+    "createGitHash": {
+      "type": "boolean",
+      "description": "Create a git hash.",
+      "default": false
+    }
+  },
+  "required": []
+}

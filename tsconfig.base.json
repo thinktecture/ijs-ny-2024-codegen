@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@my-workspace/my-library": ["my-library/src/index.ts"],
+      "@my-workspace/my-plugin": ["tools/my-plugin/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

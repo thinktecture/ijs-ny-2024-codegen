@@ -1,0 +1,20 @@
+{
+  "name": "my-library",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "my-library/src",
+  "prefix": "lib",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "my-library/jest.config.ts"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  }
+}

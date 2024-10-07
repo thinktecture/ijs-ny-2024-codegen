@@ -27,3 +27,4 @@ jobs:
       - run: npm ci --legacy-peer-deps
       - uses: nrwl/nx-set-shas@v4
 
+      - run: npx nx echo my-workspace --configuration=ci

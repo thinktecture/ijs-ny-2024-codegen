@@ -6,6 +6,21 @@
   "sourceRoot": "apps/my-workspace/src",
   "tags": [],
   "targets": {
+    "echo": {
+      "executor": "@my-workspace/my-plugin:echo",
+      "options": {
+        "value": "Hello from options"
+      },
+      "configurations": {
+        "dev": {
+          "value": "Hello from dev"
+        },
+        "ci": {
+          "createGitHash": true
+        }
+      },
+      "defaultConfiguration": "dev"
+    },
     "build": {
       "executor": "@angular-devkit/build-angular:application",
       "outputs": ["{options.outputPath}"],
