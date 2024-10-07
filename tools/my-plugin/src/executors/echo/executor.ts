@@ -17,11 +17,13 @@ const runExecutor: PromiseExecutor<EchoExecutorSchema> = async (options, context
     if (!res.success) return res;
   }
 
-  const execPromise = promisify(exec);
-  const execResult = await execPromise('git rev-parse HEAD');
+  if (options.createGitHash) {
+    const execPromise = promisify(exec);
+    const execResult = await execPromise('git rev-parse HEAD');
 
-  const path = joinPathFragments(context.root, 'dist', 'apps', context.projectName, 'browser', 'hash.txt');
-  await writeFile(path, execResult.stdout);
+    const path = joinPathFragments(context.root, 'dist', 'apps', context.projectName, 'browser', 'hash.txt');
+    await writeFile(path, execResult.stdout);
+  }
 
   return {
     success: true,

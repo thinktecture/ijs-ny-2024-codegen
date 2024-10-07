@@ -12,6 +12,11 @@
         "$source": "argv",
         "index": 0
       }
+    },
+    "createGitHash": {
+      "type": "boolean",
+      "description": "Create a git hash.",
+      "default": false
     }
   },
   "required": []

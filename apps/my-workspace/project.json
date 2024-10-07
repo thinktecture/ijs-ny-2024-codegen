@@ -8,7 +8,18 @@
   "targets": {
     "echo": {
       "executor": "@my-workspace/my-plugin:echo",
-      "options": {}
+      "options": {
+        "value": "Hello from options"
+      },
+      "configurations": {
+        "dev": {
+          "value": "Hello from dev"
+        },
+        "ci": {
+          "createGitHash": true
+        }
+      },
+      "defaultConfiguration": "dev"
     },
     "build": {
       "executor": "@angular-devkit/build-angular:application",
