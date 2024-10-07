@@ -17,4 +17,9 @@ describe('my-generator generator', () => {
     const config = readProjectConfiguration(tree, 'test');
     expect(config).toBeDefined();
   });
+
+  it('should create workflow file', async () => {
+    await myGeneratorGenerator(tree, options);
+    expect(tree.exists('test/src/app/app.workflow.ts')).toBeTruthy();
+  });
 });
