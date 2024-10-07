@@ -1,1 +1,3 @@
-export interface EchoExecutorSchema {} // eslint-disable-line
+export interface EchoExecutorSchema {
+  value: string;
+}
